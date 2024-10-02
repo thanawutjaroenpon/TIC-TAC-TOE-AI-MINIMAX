@@ -77,8 +77,7 @@ def play_game(ai_player='X', opponent_player='O', opponent_type='random'):
                 action = choose_minimax_action(board, opponent_player, ai_player)
             else:
                 actions = available_actions(board)
-                action = random.choice(actions)  # Random move for opponent
-
+                action = random.choice(actions)  
         board[action] = current_player
 
         if check_winner(board, current_player):
